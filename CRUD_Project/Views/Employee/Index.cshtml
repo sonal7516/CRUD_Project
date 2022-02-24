@@ -1,0 +1,30 @@
+﻿@model IEnumerable<CRUD_Project.Models.Employee>
+
+@{
+}
+
+<a asp-action="Create" asp-controller="Employee" class="btn btn-outline-danger">Create</a>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Mobile</th>
+            <th>Address</th>
+            <th>Gender</th>
+        </tr>
+    </thead>
+
+    @foreach (var Emp in Model)
+    {
+<tr>
+    <td>@Emp.Id</td>
+    <td>@Emp.Name</td>
+    <td>@Emp.Email</td>
+    <td>@Emp.Mobile</td>
+    <td>@Emp.Address</td>
+    <td>@Emp.Gender</td>
+</tr>
+    }
+</table>
